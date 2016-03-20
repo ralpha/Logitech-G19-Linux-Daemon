@@ -10,6 +10,7 @@ fi
 
 cd /usr/lib/g19/
 
-DATE=$(date +"%m-%d-%y");
+#DATE=$(date +"%m-%d-%y");
 
-/usr/lib/g19/g19.py >> /usr/lib/g19/log/$DATE.out 2>> /usr/lib/g19/log/$DATE.err &
+#/usr/lib/g19/g19.py >> /usr/lib/g19/log/$DATE.out 2>> /usr/lib/g19/log/$DATE.err &
+/usr/lib/g19/g19.py &
