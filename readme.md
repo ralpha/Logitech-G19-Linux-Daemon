@@ -53,6 +53,7 @@ Addition steps:
 $ pip install pyRFC3339
 $ pip install pytz
 $ pip install tzlocal
+$ pip install --upgrade google-api-python-client
 ```
  - for calendar applet you need to create a client_secret.json file:
     - Follow instructions: https://developers.google.com/api-client-library/python/samples/samples
