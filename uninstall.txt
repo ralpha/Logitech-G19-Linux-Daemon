@@ -1,0 +1,10 @@
+to uninstall:
+
+remove:
+
+/usr/lib/g19/*
+/etc/sudoers.d/g19
+~/.config/autostart/G19.desktop
+
+user setting (may not exist):
+~/.lg19/*

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=sudo /usr/lib/g19/g19-startup.sh
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_US]=G19 custom drivers
+Comment[en_US]=Custom drivers for G19 keyboard
+Name=G19 custom drivers
+Comment=Custom drivers for G19 keyboard
+X-GNOME-Autostart-Delay=10
