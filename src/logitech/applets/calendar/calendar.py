@@ -111,9 +111,12 @@ class CalendarRun(Runnable):
         self.__lg19.set_text()
         
         self.__conf = G19Config("calendar")
-        self.__credentials = get_credentials()
-        self.__http = self.__credentials.authorize(httplib2.Http())
-        self.__service = discovery.build('calendar', 'v3', http=self.__http)
+        try:
+          self.__credentials = get_credentials()
+          self.__http = self.__credentials.authorize(httplib2.Http())
+          self.__service = discovery.build('calendar', 'v3', http=self.__http)
+        except:
+          pass
         self.__calSelectCursorPos = 0
         self.__calSelectPage = None
         self.__nextPageToken = None

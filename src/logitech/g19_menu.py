@@ -16,6 +16,7 @@ class G19Menu(object):
         self.__selectedItem = 1
         self.__selection = 1
         self.__inputProcessor = MenuInputProcessor(self)
+        self.__selectedApplet = None
         self.loadApplets();
         self.showMenu(self.__applets)
         
@@ -86,13 +87,16 @@ class G19Menu(object):
             pass
 
     def stopSelected(self):
-        if self.__menuOnly == True:
+        if self.__menuOnly == True and self.__selectedApplet != None:
             try:
                 self.__selectedApplet.stop()
             finally:
                 self.__lg19.remove_applet(self.__selectedApplet)
                 self.__menuOnly = False
                 self.__lg19.setLastOpenApplet("None")
+        else:
+            if self.__selectedApplet == None:
+                self.__menuOnly = False
         self.showMenu(self.__applets)
         
     def quitApplets(self):
